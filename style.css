@@ -7,8 +7,7 @@
 .form_01{
     display: flex;
     flex-direction: column;
-    align-items: center;
-    margin-top: 13%;
+    align-items: center;  
     gap: 20px;
 }
 .form_01 input{
@@ -16,7 +15,7 @@
     margin-top: 10px;
     padding:7px;
     border-radius: 30px;
-    box-shadow: 1px 2px 2px 2px #d681f8;
+    box-shadow: 2px 3px 1px 1px #d681f8;
     background-color: rgb(117, 136, 245);
 }
 .form_01 label{
@@ -25,4 +24,22 @@
 }
 .container{
     background-color: #81b9f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;    
+   
+    
 }
+.botao{
+    display: flex;
+    width: 170px;
+    height: 50px;
+    margin-top: 40px;
+    padding: 15px;
+    justify-content: center;
+    border-radius: 20px;
+    background-color: rgb(222, 137, 230);
+    color:rgb(219, 4, 155) ;
+}
+

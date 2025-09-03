@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        label{
+            display: flex;
+        }
+        input{
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <form action="cadastro.php" method="post">
+        <fieldset>
+        <label>Nome</label>
+        <input type="text" title="nome" maxlength="100" required>
+        <label>Sobrenome</label>
+        <input type="text" maxlength="100" required>
+        <label>E-mail</label>
+        <input type="email"required>
+        <label>Data de nascimento</label>
+        <input type="date" datemin="01/01/1920" datemax="01/01/2024">
+        <label>Sexo <input type="radio"> masculino  <input type="radio"> feminino</label>
+        <label>Endereço</label>
+        <input type="text" maxlength="200">
+        <label>CEP</label>
+        <input type="text" maxlength="10">
+        <label>Cor favorita</label>
+        <input type="color">
+        <label>Estado(uf)</label>
+        <input type="Select">
+    </fieldset>
+        <input type="submit">
+        <input type="reset">
+    </form>
+</body>
+</html>

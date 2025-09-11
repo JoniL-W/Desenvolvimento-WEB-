@@ -1,0 +1,109 @@
+body {
+    background: #f3f3f3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+  }
+  
+  .calculadora {
+    background: #222;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 5px 15px rgba(0,0,0,0.3);
+    width: 280px;
+    text-align: center;
+  }
+  
+  h1 {
+    color: #fff;
+    margin-bottom: 15px;
+    font-size: 1.5em;
+  }
+  
+  input {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+    font-size: 1em;
+    border: none;
+    border-radius: 8px;
+    text-align: center;
+  }
+  
+  .botoes {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 15px;
+  }
+  
+  button {
+    flex: 1;
+    margin: 5px;
+    padding: 15px;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background: #333;
+    color: #fff;
+    transition: background 0.3s;
+  }
+  
+  button:hover {
+    background: #444;
+  }
+  
+  .soma { background: #27ae60; }
+  .sub  { background: #c0392b; }
+  .mul  { background: #2980b9; }
+  .div  { background: #f39c12; }
+  
+  .soma:hover { background: #1e8449; }
+  .sub:hover  { background: #922b21; }
+  .mul:hover  { background: #1f618d; }
+  .div:hover  { background: #d35400; }
+  
+  .resultado-container {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .igual {
+    background: #16a085;
+    width: 100%;
+  }
+  
+  .igual:hover {
+    background: #117864;
+  }
+  
+  .resultado {
+    margin-top: 10px;
+    background: #fff;
+    color: #000;
+    width: 80%;
+    height: 50px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    font-weight: bold;
+    box-shadow: inset 0px 0px 5px rgba(0,0,0,0.3);
+  }
+
+  
+
+  .negativo{
+    background-color: rgb(224, 7, 7);
+  }
+  .positivo{
+    background-color: #00ff73;
+  }
+  .igual0{
+    background-color: rgb(131, 131, 131);
+  }

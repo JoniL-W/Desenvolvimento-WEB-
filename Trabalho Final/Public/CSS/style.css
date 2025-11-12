@@ -33,7 +33,6 @@ body {
   color: white;
 }
 
-/* Escala de cores 0-10 (verde → vermelho) */
 .opcoes button:nth-child(1) { background-color: #00c853; }
 .opcoes button:nth-child(2) { background-color: #2ecc71; }
 .opcoes button:nth-child(3) { background-color: #7cb342; }

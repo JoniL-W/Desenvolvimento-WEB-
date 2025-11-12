@@ -46,3 +46,7 @@ INSERT INTO perguntas (texto_pergunta, status_pergunta) VALUES
 INSERT INTO setores (id_setor,nome_setor) VALUES 
 (1,'Atendimento'),
 (2,'Serviçoes');
+
+INSERT INTO dispositivos(id_dispositivo,nome_dispositivo,status_dispositivo) VALUES
+(1,'Estacionamento','ativo'),
+(2,'Espaço interno','ativo');

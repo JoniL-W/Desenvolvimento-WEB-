@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   const respostas = [];
 
   try {
-    const response = await fetch("../../SRC/perguntas.php"); // caminho relativo ao HTML
+    const response = await fetch("../../SRC/perguntas.php"); 
     perguntas = await response.json();
 
     if (!perguntas || perguntas.length === 0) {
@@ -20,7 +20,6 @@ document.addEventListener("DOMContentLoaded", async () => {
   }
 
   function exibirPergunta() {
-    // Se passou da última pergunta → mostra tela final de feedback
     if (indiceAtual === perguntas.length) {
       exibirTelaFinal();
       return;
@@ -65,7 +64,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       respostas[indiceAtual] = {
         id_pergunta: p.id_pergunta,
         resposta: parseInt(selecionado.dataset.valor),
-        feedback: null, // preenchido apenas no final
+        feedback: null, 
         id_setor: 1,
         id_dispositivo: 1
       };
@@ -91,7 +90,6 @@ document.addEventListener("DOMContentLoaded", async () => {
     });
 
     document.getElementById("enviar").addEventListener("click", async () => {
-      // Adiciona o feedback final (se houver)
       const textoFeedback = document.getElementById("feedback").value;
       if (respostas.length > 0) {
         respostas[respostas.length - 1].feedback = textoFeedback || null;

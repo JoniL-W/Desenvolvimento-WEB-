@@ -1,9 +1,7 @@
 <?php
-$host = "localhost";
-$port = "5432";
-$dbname = "Trabalho_semestral";
-$user = "postgres";
-$password = "12345";
+
+require_once '../config.php';
+
 
 try {
     $conn = new PDO("pgsql:host=$host;port=$port;dbname=$dbname", $user, $password);

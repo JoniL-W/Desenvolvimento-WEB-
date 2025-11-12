@@ -43,12 +43,6 @@ INSERT INTO perguntas (texto_pergunta, status_pergunta) VALUES
 ('Você considera que o setor visitado foi eficiente no atendimento?', 'ativa'),
 ('De forma geral, qual é o seu nível de satisfação com o estabelecimento?', 'ativa');
 
-
--- Exemplo: inserir um admin (substitua senha_hash pelo hash gerado)
-INSERT INTO usuarios_admin (login,senha) VALUES
-('joni', '$2y$10$AmWLWMbe6gdViS6C2S4xZ.fdzQBaR/j.Ij7gQ.OYd5YDhDwZ3B7Ey');
-
-ALTER TABLE usuarios_admin
-ADD COLUMN senha VARCHAR(200);
-
-DELETE from usuarios_admin;
+INSERT INTO setores (id_setor,nome_setor) VALUES 
+(1,'Atendimento'),
+(2,'Serviçoes');

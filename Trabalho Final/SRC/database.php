@@ -1,6 +1,6 @@
 <?php
 
-require_once '../config.php';
+require_once '../configBanco.php';
 
 try {
     $conn = new PDO("pgsql:host=$host;port=$port;dbname=$dbname", $user, $password);

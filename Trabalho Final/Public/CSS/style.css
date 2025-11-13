@@ -4,15 +4,21 @@ body {
   background-color: #f4f6f9;
   margin: 0;
   padding: 0;
+  
 }
 
+
 .tela {
-  width: 80%;
+  
+  width: 90%;
+  height: 400px;
   margin: 40px auto;
   background: white;
   border-radius: 20px;
   padding: 30px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  box-shadow: 0 0 25px rgba(3,3,3,0.3);
+  background-color: #dae4ee;
+  
 }
 
 .opcoes {
@@ -26,11 +32,16 @@ body {
 .opcoes button {
   border: none;
   padding: 15px 20px;
-  font-size: 18px;
-  border-radius: 10px;
+  font-size: 32px;
+  border-radius: 60px;
   cursor: pointer;
   transition: 0.2s;
   color: white;
+  height: 75px;
+  width: 75px;
+  box-shadow: 0 0 25px rgba(3,3,3,0.3);
+  margin-top: 30px;
+  margin-bottom: 40px;
 }
 
 .opcoes button:nth-child(1) { background-color: #00c853; }
@@ -42,12 +53,19 @@ body {
 .opcoes button:nth-child(7) { background-color: #f57c00; }
 .opcoes button:nth-child(8) { background-color: #ef6c00; }
 .opcoes button:nth-child(9) { background-color: #e65100; }
-.opcoes button:nth-child(10) { background-color: #d84315; }
-.opcoes button:nth-child(11) { background-color: #b71c1c; }
+.opcoes button:nth-child(10) { background-color:#d84315; }
+.opcoes button:nth-child(11) { background-color:#b71c1c; }
+
+
+.perguntas {
+  font-size: 40px;
+  
+}
 
 .opcoes button.selecionado {
   outline: 3px solid #000;
   transform: scale(1.1);
+  
 }
 
 textarea {
@@ -60,8 +78,20 @@ textarea {
   border: 1px solid #ccc;
 }
 
-.navegacao button {
-  background-color: #007BFF;
+.volt{
+  background-color: #ff0000;
+  color: white;
+  border: none;
+  margin: 10px;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s;
+  height: 100px;
+  width: 100px;
+}
+.env_resp{
+  background-color: #58df58;
   color: white;
   border: none;
   margin: 10px;
@@ -70,6 +100,46 @@ textarea {
   cursor: pointer;
   transition: 0.2s;
 }
+
+.navegacao .voltar{
+  background-color: #ff0000;
+  color: white;
+  border: none;
+  margin: 10px;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s;
+  height: 60px;
+  width: 170px;
+  font-size: 24px;
+  box-shadow: 0 0 25px rgba(3,3,3,0.3);
+}
+.navegacao .proxima{
+  background-color: #0004ff;
+  color: white;
+  border: none;
+  margin: 10px;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s;
+  height: 60px;
+  width: 170px;
+  font-size: 24px;
+  box-shadow: 0 0 25px rgba(3,3,3,0.3);
+}
+.volrar_inicio{
+  background-color: #0084ff;
+  color: white;
+  border: none;
+  margin: 10px;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
 
 .navegacao button:hover {
   background-color: #0056b3;
@@ -83,4 +153,9 @@ footer {
   color: #555;
   font-size: 14px;
   border-top: 1px solid #ccc;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+ 
 }

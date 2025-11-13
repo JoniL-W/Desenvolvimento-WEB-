@@ -27,15 +27,15 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     const p = perguntas[indiceAtual];
     container.innerHTML = `
-      <h2>${p.texto_pergunta}</h2>
+      <h2 class="perguntas">${p.texto_pergunta}</h2>
       <div class="opcoes">
         ${[...Array(11).keys()]
           .map(i => `<button class="opcao" data-valor="${i}">${i}</button>`)
           .join("")}
       </div>
       <div class="navegacao">
-        <button id="voltar" ${indiceAtual === 0 ? "disabled" : ""}>← Voltar</button>
-        <button id="proxima">Próxima →</button>
+        <button class="voltar" id="voltar" ${indiceAtual === 0 ? "disabled" : ""}>← Voltar</button>
+        <button class="proxima" id="proxima">Próxima →</button>
       </div>
     `;
 
@@ -79,8 +79,8 @@ document.addEventListener("DOMContentLoaded", async () => {
       <h2>Deseja deixar alguma observação sobre sua experiência?</h2>
       <textarea id="feedback" placeholder="Digite aqui sua observação (opcional)..."></textarea>
       <div class="navegacao">
-        <button id="voltar">← Voltar</button>
-        <button id="enviar">Enviar respostas →</button>
+        <button class="volt" id="voltar">← Voltar</button>
+        <button class="env_resp" id="enviar">Enviar respostas →</button>
       </div>
     `;
 
@@ -107,7 +107,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         if (resultado.sucesso) {
           container.innerHTML = `
             <h2>O Estabelecimento agradece sua resposta e ela é muito importante para nós, pois nos ajuda a melhorar continuamente nossos serviços.</h2>
-            <button id="refazer" style="margin-top:20px; padding:10px 20px; font-size:16px; cursor:pointer;">
+            <button class="volrar_inicio"  id="refazer" style="margin-top:20px; padding:10px 20px; font-size:16px; cursor:pointer;">
               Voltar ao início
             </button>
           `;

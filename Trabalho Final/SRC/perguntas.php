@@ -1,6 +1,6 @@
 <?php
 header("Content-Type: application/json; charset=UTF-8");
-include 'db.php';
+include 'database.php';
 
 try {
     $stmt = $conn->query("

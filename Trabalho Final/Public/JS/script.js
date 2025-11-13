@@ -76,11 +76,11 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   function exibirTelaFinal() {
     container.innerHTML = `
-      <h2>Deseja deixar alguma observação sobre sua experiência?</h2>
+      <h2 class="perguntas" >Deseja deixar alguma observação sobre sua experiência?</h2>
       <textarea id="feedback" placeholder="Digite aqui sua observação (opcional)..."></textarea>
       <div class="navegacao">
         <button class="volt" id="voltar">← Voltar</button>
-        <button class="env_resp" id="enviar">Enviar respostas →</button>
+        <button class="env_resp" id="enviar">Enviar →</button>
       </div>
     `;
 
@@ -106,8 +106,8 @@ document.addEventListener("DOMContentLoaded", async () => {
 
         if (resultado.sucesso) {
           container.innerHTML = `
-            <h2>O Estabelecimento agradece sua resposta e ela é muito importante para nós, pois nos ajuda a melhorar continuamente nossos serviços.</h2>
-            <button class="volrar_inicio"  id="refazer" style="margin-top:20px; padding:10px 20px; font-size:16px; cursor:pointer;">
+            <h2 class="perguntas">O Estabelecimento agradece sua resposta e ela é muito importante para nós, pois nos ajuda a melhorar continuamente nossos serviços.</h2>
+            <button class="voltar_inicio"  id="refazer">
               Voltar ao início
             </button>
           `;

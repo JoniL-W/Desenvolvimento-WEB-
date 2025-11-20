@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Painel Admin — Gerenciar Perguntas</title>
+  <link rel="stylesheet" href="../CSS/admin.css" />
+</head>
+<body>
+  <main class="stage">
+    <!-- LOGIN -->
+    <section id="loginScreen" class="card login-card">
+      <h2 class="brand">Painel Administrativo</h2>
+      <p class="sub">Faça login para acessar a área de gerenciamento (uso em tablet)</p>
+
+      <label class="field">
+        <span class="label-text">Usuário</span>
+        <input id="loginUser" type="text" inputmode="text" autocomplete="username" placeholder="admin" />
+      </label>
+
+      <label class="field">
+        <span class="label-text">Senha</span>
+        <input id="loginPass" type="password" inputmode="text" autocomplete="current-password" placeholder="••••••" />
+      </label>
+
+      <button id="btnLogin" class="btn primary large">Entrar</button>
+      <p class="hint">Usuário / Senha de exemplo: <strong>admin / 1234</strong></p>
+    </section>
+
+    <!-- ADMIN PANEL -->
+    <section id="adminPanel" class="admin-grid hidden" aria-hidden="true">
+      <header class="topbar card">
+        <div>
+          <h1>Gerenciamento de Perguntas</h1>
+          <p class="muted"></p>
+        </div>
+        <div class="top-actions">
+          <button id="btnLogout" class="btn ghost">Sair</button>
+          <button id="btnToDashboard" class="btn accent">Ir ao Dashboard</button>
+        </div>
+      </header>
+
+      <form id="questionForm" class="card form-card" onsubmit="return false;">
+        <h2 class="card-title">Editar / Criar Pergunta</h2>
+
+        <div class="form-row">
+          <label class="field full">
+            <span class="label-text">Pergunta</span>
+            <textarea id="txtPergunta" placeholder="Digite a pergunta aqui..." rows="4" required></textarea>
+          </label>
+        </div>
+
+        <div class="form-row two-cols">
+          <label class="field">
+            <span class="label-text">Setor</span>
+            <div class="select-row">
+              <select id="selSetor"></select>
+              <button type="button" id="addSetor" class="btn small ghost" title="Adicionar setor">+</button>
+            </div>
+          </label>
+
+          <label class="field">
+            <span class="label-text">Dispositivo</span>
+            <div class="select-row">
+              <select id="selDisp"></select>
+              <button type="button" id="addDisp" class="btn small ghost" title="Adicionar dispositivo">+</button>
+            </div>
+          </label>
+        </div>
+
+        <div class="form-row two-cols">
+          <label class="field">
+            <span class="label-text">ID da Pergunta (opcional)</span>
+            <input id="idPergunta" type="number" placeholder="Para editar/remover" />
+          </label>
+
+          <label class="field">
+            <span class="label-text">Ação</span>
+            <select id="selAcao">
+              <option value="create">Criar</option>
+              <option value="update">Atualizar</option>
+              <option value="remove">Remover</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="form-row">
+          <button id="btnEnviar" type="button" class="btn primary large">Enviar Alterações</button>
+        </div>
+      </form>
+
+      <aside id="preview" class="card preview-card">
+        <h2 class="card-title">Preview / Histórico</h2>
+
+        <div id="previewCard" class="preview-item">
+          <p class="preview-meta">Aguardando preenchimento...</p>
+        </div>
+
+        <div class="history">
+          <h3>Últimas ações</h3>
+          <ul id="historyList" class="history-list">
+            <!-- preenchido por JS -->
+          </ul>
+        </div>
+      </aside>
+    </section>
+  </main>
+
+  <div id="toast" class="toast hidden" role="status" aria-live="polite"></div>
+
+<script src="../JS/admin.js"></script>
+</body>
+</html>

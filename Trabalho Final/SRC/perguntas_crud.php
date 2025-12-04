@@ -1,20 +1,16 @@
 <?php
 header("Content-Type: application/json; charset=UTF-8");
-include 'database.php'; // sua conexão existente
+require_once 'database.php';
 
-// recebe o JSON enviado pelo fetch
 $dados = json_decode(file_get_contents("php://input"), true);
 
 $acao = $dados["acao"] ?? "";
 $id = $dados["id"] ?? null;
 $texto = $dados["texto"] ?? "";
-$status = "ativa"; // padrão exigido pela tabela
+$status = "ativa"; 
 
 try {
 
-    /* ------------------------------------------ */
-    /* 🔹 CRIAR PERGUNTA                          */
-    /* ------------------------------------------ */
     if ($acao === "create") {
 
         $sql = "INSERT INTO perguntas (texto_pergunta, status_pergunta)
@@ -38,9 +34,6 @@ try {
     }
 
 
-    /* ------------------------------------------ */
-    /* 🔹 ATUALIZAR PERGUNTA                      */
-    /* ------------------------------------------ */
     if ($acao === "update") {
 
         $sql = "UPDATE perguntas 
@@ -61,9 +54,6 @@ try {
     }
 
 
-    /* ------------------------------------------ */
-    /* 🔹 REMOVER PERGUNTA                        */
-    /* ------------------------------------------ */
     if ($acao === "remove") {
 
         $sql = "DELETE FROM perguntas WHERE id_pergunta = :id";
@@ -81,9 +71,6 @@ try {
     }
 
 
-    /* ------------------------------------------ */
-    /* 🔹 AÇÃO INVÁLIDA                           */
-    /* ------------------------------------------ */
     echo json_encode(["erro" => "Ação inválida"]);
     
 

@@ -2,13 +2,13 @@
 session_start();
 require_once "../src/auth.php";
 
-// Se já estiver logado, vai direto ao painel
+
 if (isLogged()) {
     header("Location: painel.php");
     exit;
 }
 
-// Se enviou login
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $usuario = $_POST['usuario'] ?? '';
     $senha = $_POST['senha'] ?? '';

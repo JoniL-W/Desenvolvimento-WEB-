@@ -57,7 +57,6 @@ try {
     if ($acao === "remove") {
 
         $sql = "DELETE FROM perguntas WHERE id_pergunta = :id";
-
         $stm = $conn->prepare($sql);
         $stm->execute([
             ":id" => $id

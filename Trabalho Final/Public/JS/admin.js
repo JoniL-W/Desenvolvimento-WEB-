@@ -2,9 +2,6 @@ btnDashboard.addEventListener('click', () => {
   window.location.href = "../../SRC/dashboard.php";
 });
 
-
-
-
 document.addEventListener('DOMContentLoaded', () => {
   const listaSetores = [
     { id: 1, nome: 'Atendimento' },
@@ -16,7 +13,6 @@ document.addEventListener('DOMContentLoaded', () => {
     { id: 2, nome: 'Mobile' }
   ];
 
-  // Referências de DOM
   const telaLogin = document.getElementById('loginScreen');
   const painelAdmin = document.getElementById('adminPanel');
   const botaoLogin = document.getElementById('btnLogin');
@@ -34,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const historyList = document.getElementById('historyList');
   const toast = document.getElementById('toast');
 
-  // ===== Funções utilitárias =====
+
   function mostrarToast(mensagem, tipo = 'ok') {
     if (!toast) return;
     toast.textContent = mensagem;
@@ -97,7 +93,6 @@ document.addEventListener('DOMContentLoaded', () => {
     previewCard.innerHTML = html.join('');
   }
 
-  // ===== Eventos =====
   if (botaoLogin) {
     botaoLogin.addEventListener('click', () => {
       const usuario = document.getElementById('loginUser')?.value.trim();
@@ -158,7 +153,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // preview em tempo real
   ['input', 'change'].forEach(ev => {
     if (txtPergunta) txtPergunta.addEventListener(ev, atualizarPreview);
     if (selSetor) selSetor.addEventListener(ev, atualizarPreview);
@@ -167,7 +161,6 @@ document.addEventListener('DOMContentLoaded', () => {
     if (selAcao) selAcao.addEventListener(ev, atualizarPreview);
   });
 
-  // envio de formulário
   if (btnEnviar) {
     btnEnviar.addEventListener('click', async () => {
       if (!txtPergunta || !selSetor || !selDispositivo || !idPergunta || !selAcao) return;
@@ -218,6 +211,4 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }
-
-
 });

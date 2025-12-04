@@ -22,7 +22,6 @@
     color:#222;
   }
   
-  /* stage centralizado para tablet */
   .stage{
     min-height:100vh;
     display:flex;
@@ -31,7 +30,7 @@
     padding:28px;
   }
   
-  /* CARTÕES */
+ 
   .card{
     background:var(--card);
     border-radius:var(--radius);
@@ -39,7 +38,6 @@
     padding:20px;
   }
   
-  /* LOGIN */
   .login-card{
     width:88%;
     max-width:520px;
@@ -60,7 +58,7 @@
   .field .label-text{font-weight:600;display:block;margin-bottom:8px;color:#333}
   .hint{font-size:13px;color:var(--muted);margin-top:14px}
   
-  /* BOTOES */
+
   .btn{
     border:0;
     border-radius:12px;
@@ -76,7 +74,7 @@
   .btn.accent{background:var(--accent-2);color:#fff}
   .btn.primary.large{box-shadow:0 6px 18px rgba(27,142,242,0.18)}
   
-  /* Admin layout (grid: form + preview) */
+ 
   .admin-grid{
     width:100%;
     max-width:var(--tablet-width);
@@ -86,7 +84,7 @@
     align-items:start;
   }
   
-  /* topo */
+  
   .topbar{
     grid-column:1 / span 2;
     display:flex;
@@ -97,7 +95,7 @@
   .topbar h1{margin:0;font-size:26px}
   .topbar .muted{color:var(--muted);margin:4px 0 0}
   
-  /* form */
+
   .form-card{
     padding:24px;
     display:flex;
@@ -106,17 +104,17 @@
   }
   .card-title{margin:0 0 6px;font-size:20px;color:#333}
   
-  /* form rows */
+
   .form-row{display:block}
   .two-cols{display:grid;grid-template-columns:1fr 1fr;gap:12px}
   .full{grid-column:1 / span 2}
   
-  /* selects with add button */
+  
   .select-row{display:flex;gap:8px;align-items:center}
   .select-row select{flex:1}
   .select-row .btn.small{width:56px;height:44px;padding:0}
   
-  /* preview */
+
   .preview-card{padding:20px;position:relative}
   .preview-item{padding:14px;border-radius:12px;background:#fbfdff;border:1px solid #eef5ff;min-height:110px;display:flex;flex-direction:column;gap:10px}
   .preview-head{font-weight:700;color:#243b55}
@@ -125,13 +123,13 @@
   .preview-rel{color:#374151;font-size:15px}
   .preview-id{color:#555;font-size:14px}
   
-  /* history */
+  
   .history{margin-top:16px}
   .history h3{margin:8px 0;font-size:16px}
   .history-list{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:8px;max-height:180px;overflow:auto}
   .history-list li{padding:8px 10px;border-radius:10px;background:#fcfcfd;border:1px solid #f1f5f9;font-size:14px;color:#333}
   
-  /* toast */
+  
   .toast{
     position:fixed;
     left:50%;
@@ -152,19 +150,17 @@
   .toast.ok{background:linear-gradient(90deg,#1b8ef2,#2065c9)}
   .toast.err{background:linear-gradient(90deg,#ef4444,#c53030)}
   
-  /* hidden utility */
+  
   .hidden{display:none !important}
   
-  /* responsividade pequena (telefone) */
+  
   @media (max-width:980px){
     .admin-grid{grid-template-columns:1fr; padding:12px}
     .preview-card{order:2}
   }
   
-  /* Toque — aumento de área clicável */
   button, input, select, textarea { touch-action:manipulation; -webkit-tap-highlight-color: rgba(0,0,0,0.06); }
   
-  /* foco acessível */
   input:focus, textarea:focus, select:focus, button:focus {
     outline: 3px solid rgba(27,142,242,0.15);
     outline-offset: 3px;
